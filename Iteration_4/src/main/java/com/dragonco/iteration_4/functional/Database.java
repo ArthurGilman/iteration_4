@@ -13,12 +13,6 @@ public class Database {
     static Map<Long, VolumetricShape> volumetricShape = new HashMap<>();
 
 
-    static {
-        flatShape.put(1L, new Circle(BigDecimal.TEN, 1));
-        flatShape.put(2L, new Square(BigDecimal.TEN, 2));
-        volumetricShape.put(1L, new Cube(BigDecimal.TEN,BigDecimal.TWO, 3));
-        volumetricShape.put(2L, new Sphere(BigDecimal.TWO, BigDecimal.ONE, 2));
-    }
 
     static Optional<Shape> findFlatShapeById(long id) {
         return Optional.ofNullable(flatShape.get(id));
